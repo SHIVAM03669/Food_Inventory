@@ -1,0 +1,277 @@
+/* Default Variables */
+:root {
+    --background: linear-gradient(135deg, #6c63ff, #4ca1af), url('your-image-url.jpg');
+    --text-color: #333;
+    --button-background: linear-gradient(135deg, #6c63ff, #4ca1af);
+    --input-border: #ccc;
+    --focus-border: #6c63ff;
+}
+
+/* Dark Theme Variables */
+.dark-theme {
+    --background: linear-gradient(135deg, #000, #444), url('your-dark-theme-image.jpg');
+    --text-color: #ff9800;
+    --button-background: linear-gradient(135deg, #ff9800, #ff5722);
+    --input-border: #ff9800;
+    --focus-border: #ff5722;
+}
+
+/* Light Theme Variables
+.light-theme {
+    --background: linear-gradient(135deg, #fff, #f0f0f0), url('your-light-theme-image.jpg');
+    --text-color: #1e88e5;
+    --button-background: linear-gradient(135deg, #1e88e5, #64b5f6);
+    --input-border: #1e88e5;
+    --focus-border: #64b5f6;
+} */
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: var(--background);
+    background-size: cover;  /* Ensures the image covers the entire background */
+    background-position: center;  /* Centers the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: var(--text-color);
+}
+
+/* Login Container */
+.login-wrapper {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Title */
+.login-wrapper h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+/* Tagline */
+.tagline {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--input-border);
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.form-group input:focus {
+    border-color: var(--focus-border);
+    outline: none;
+    box-shadow: 0 0 5px var(--focus-border);
+}
+
+/* Button Styling */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--button-background);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    background: var(--button-background);
+}
+
+/* Dropdown for Theme Switcher */
+.theme-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.theme-switcher label {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-right: 10px;
+}
+
+/* Toggle Switch Styling */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #1e88e5;
+}
+
+input:checked + .slider:before {
+    transform: translateX(30px);
+}
+
+.switch-text {
+    margin-left: 10px;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+/* Additional Styling for Error Message or Links */
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 10px;
+}
+/* Forgot Password Link Styling */
+.forgot-password {
+    font-size: 14px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    display: block;
+    margin-top: 10px;
+}
+
+.forgot-password:hover {
+    color: var(--focus-border);
+    text-decoration: underline;
+}
+
+/* Style for the form options container */
+.form-options {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+/* Forgot Password Button Styling (same as login button) */
+.forgot-password {
+    width: 100%;
+    padding: 12px;
+    background: var(--button-background);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, background 0.3s;
+    display: inline-block; /* Makes it inline with other buttons */
+    text-align: center;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    transform: translateY(-2px);
+    background: var(--button-background);
+}
+
+.forgot-password:focus {
+    outline: none;
+    box-shadow: 0 0 5px var(--focus-border);
+}
+
+/* Optional: Adjusting the spacing of the form options to ensure the button aligns properly */
+.form-options {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+/* Forgot Password Button Styling (same as login button) */
+.forgot-password {
+    width: 100%;
+    padding: 12px;
+    background: var(--button-background);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, background 0.3s;
+    display: inline-block; /* Makes it inline with other buttons */
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 15px; /* Space between Forgot Password and Login button */
+}
+
+.forgot-password:hover {
+    transform: translateY(-2px);
+    background: var(--button-background);
+}
+
+.forgot-password:focus {
+    outline: none;
+    box-shadow: 0 0 5px var(--focus-border);
+}
+
+/* Adjusting the form options container to align the Forgot Password button properly */
+.form-options {
+    display: flex;
+    justify-content: center; /* Centering the forgot password button */
+    margin-top: 15px; /* Space above the forgot password button */
+}
+
+/* Ensuring the font and text styling of Forgot Password matches the Login button */
+.forgot-password {
+    font-family: 'Arial', sans-serif; /* Ensures the font is consistent */
+    font-size: 16px; /* Matches the login button's font size */
+    font-weight: bold; /* Matches the login button's font weight */
+    text-decoration: none; /* Removes the underline */
+}

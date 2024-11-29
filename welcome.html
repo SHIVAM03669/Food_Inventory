@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="welcome.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/1037/1037762.png">
+</head>
+
+<body>
+    <main class="welcome-container">
+        <h2>Welcome!</h2>
+        <p id="welcomeMessage">Explore your inventory below Veday Deshmukh.</p>
+
+        <!-- Table Section -->
+        <h3>Item Inventory</h3>
+        <table id="inventoryTable">
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Total Items</th>
+                    <th>Total Price</th>
+                    <th>Sold</th>
+                    <th>Profit After Sold</th>
+                    <th>Remaining</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be dynamically loaded or added here -->
+            </tbody>
+        </table>
+
+        <!-- Add Row Section -->
+        <button id="addRowButton">Add New Row</button>
+
+        <!-- Logout Button -->
+        <button id="logoutButton" class="logout-button">Logout</button>
+    </main>
+    <script src="welcome.js" defer></script>
+</body>
+
+</html>
