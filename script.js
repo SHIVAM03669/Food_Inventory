@@ -2,8 +2,8 @@
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const validUsername = "Veday Deshmukh";
-    const validPassword = "Veday@123";
+    const validUsername = "petugang";
+    const validPassword = "petu";
 
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
